@@ -20,14 +20,14 @@ export const mutations = {
     set_page: function(state, p) {
         state.page = p;
     },
-    remove:function(state, selFlug) {
-        console.log(selFlug);
+    remove:function(state, obj) {
+        console.log(obj);
         var num = 0;
         for (let i = 0; i < state.memo.length; i++) {
             const ob = state.memo[i];
-            if (ob.title == selFlug.title 
-                    && ob.content == selFlug.content
-                    && ob.created == selFlug.created){
+            if (ob.title == obj.title 
+                    && ob.content == obj.content
+                    && ob.created == obj.created){
                 alert('remove it! --' + ob.title);
                 state.memo.splice(i, 1);
                 return;
