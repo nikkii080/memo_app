@@ -68,7 +68,7 @@ export default {
         },
         select: function(item) {
             // console.log(item)
-            this.sel_flg = true,
+            this.sel_flg = item,
             this.title = item.title
             this.content = item.content
         },
